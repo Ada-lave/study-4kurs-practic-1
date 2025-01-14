@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['study.ada-lave.ru']
 
+CSRF_TRUSTED_ORIGINS = ['study.ada-lave.ru']
 
 # Application definition
 
