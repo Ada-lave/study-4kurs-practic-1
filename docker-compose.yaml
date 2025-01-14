@@ -1,7 +1,7 @@
 services:
   web:
     networks:
-        - parsers
+      - parsers
     container_name: study-cats
     build: ./cats
     command: gunicorn cats.wsgi:application --bind 0.0.0.0:8000
@@ -28,7 +28,6 @@ services:
       - "traefik.http.routers.study-http-router.tls.certresolver=letsencrypt"
       - "traefik.http.routers.study-http-router.service=study-http-service"
       - "traefik.http.services.study-http-service.loadbalancer.server.port=80"
-      - "traefik.http.routers.study-http-router.middlewares=study-mw-strip"
 
 networks:
   parsers:
